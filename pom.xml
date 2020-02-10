@@ -34,7 +34,7 @@
          </properties>
 
         <dependencies>
-            <!-- spring -4.2.10.Final-->
+            <!-- spring-->
             <dependency>
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-core</artifactId>
