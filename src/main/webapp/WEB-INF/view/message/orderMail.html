@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Select goods</title>
+    <style type="text/css">
+        #greetingStyle {
+            margin-left: 10%;
+            margin-right: 10%;
+            background: #fc0;
+            padding: 10px;
+            text-align: center;
+            width: 60em
+        }
+    </style>
+      <style type="text/css">
+          #formStyle {
+              margin-left: 10%;
+              margin-right: 10%;
+              background: #01DF01;
+              padding: 10px;
+              text-align: center;
+              width: 60em
+          }
+      </style>
+      <style type="text/css">
+          .price {
+              text-align: center;
+          }
+      </style>
+  </head>
+  <body>
+    <div id="greetingStyle" th:inline="text">
+        <h3>Dear [[${name}]], your order:</h3>
+    </div>
+    <div id="formStyle" th:inline="text" >
+        <tr th:each="object : ${goodsList}">
+            <div ><td th:text="${object}"></td></div>
+        </tr>
+        <div class="price">Total price: $ [[${price}]]</div>
+        <div ><img src='cid:imageResourceName'/></div>
+    </div>
+  </body>
+</html>
