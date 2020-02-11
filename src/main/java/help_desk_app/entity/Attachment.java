@@ -22,7 +22,7 @@ public class Attachment {
     @Column(name = "name")
     private String name;
 
-    public Attachment(){}
+    public Attachment(){ }
 
     public Attachment(Blob blob, Ticket ticket, String name) {
         this.blob = blob;
