@@ -1,8 +1,6 @@
 package help_desk_app.config;
 
-import app.entity.Good;
-import app.entity.Order;
-import app.entity.User;
+import help_desk_app.entity.*;
 import org.apache.tomcat.dbcp.dbcp2.BasicDataSource;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -46,7 +44,9 @@ public class HibernateUtils {
     public LocalSessionFactoryBean sessionFactory() {
         LocalSessionFactoryBean sessionFactory = new LocalSessionFactoryBean();
         sessionFactory.setDataSource(dataSource());
-        sessionFactory.setAnnotatedClasses(Good.class, Order.class, User.class);
+        sessionFactory.setAnnotatedClasses(Attachment.class, Comment.class,
+                Feedback.class, History.class,
+                Ticket.class, User.class);
         sessionFactory.setPackagesToScan(PACKAGE);
         sessionFactory.setHibernateProperties(hibernateProperties());
         return sessionFactory;

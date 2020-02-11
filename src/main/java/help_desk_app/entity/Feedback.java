@@ -29,7 +29,7 @@ public class Feedback {
     @JoinColumn(name = "ticket_id")
     private Ticket ticket;
 
-    public Feedback(){}
+    public Feedback(){ }
 
     public Feedback(User user, Byte rate, Date date, String text, Ticket ticket) {
         this.user = user;
