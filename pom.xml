@@ -5,7 +5,7 @@
         <modelVersion>4.0.0</modelVersion>
 
         <groupId>org.java.training</groupId>
-        <artifactId>online-shop</artifactId>
+        <artifactId>help-desk</artifactId>
         <version>1.0</version>
         <packaging>war</packaging>
 
@@ -31,9 +31,22 @@
             <thymeleaf.version>3.0.9.RELEASE</thymeleaf.version>
             <mockito.version>2.0.2-beta</mockito.version>
             <junit.version>4.12</junit.version>
+            <jackson.version>2.9.8</jackson.version>
+            <node.version>v12.16.1</node.version>
+            <yarn.version>v1.16.0</yarn.version>
+            <frontend-maven-plugin.version>1.7.6</frontend-maven-plugin.version>
          </properties>
 
         <dependencies>
+
+            <!-- JSON -->
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-databind</artifactId>
+                <version>${jackson.version}</version>
+            </dependency>
+            <!--    End: JSON -->
+
             <!-- spring-->
             <dependency>
                 <groupId>org.springframework</groupId>
@@ -77,7 +90,7 @@
                 <version>${spring.version}</version>
             </dependency>
 
-            <dependency>
+           <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-mail</artifactId>
                 <version>${springmail.version}</version>
@@ -240,9 +253,8 @@
         </dependencyManagement>
 
         <build>
-            <finalName>Online_Shop</finalName>
+            <finalName>Help Desk</finalName>
             <plugins>
-
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-war-plugin</artifactId>
@@ -250,6 +262,7 @@
                         <failOnMissingWebXml>false</failOnMissingWebXml>
                     </configuration>
                 </plugin>
+
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-compiler-plugin</artifactId>
@@ -267,9 +280,63 @@
                         <url>http://localhost:8080/manager/text</url>
                         <username>admin</username>
                         <password>admin</password>
-                        <path>/Online-shop2</path>
+                        <path>/Help_Desk</path>
                     </configuration>
                 </plugin>
+
+                <!--            <plugin>
+                                <groupId>com.github.eirslett</groupId>
+                                <artifactId>frontend-maven-plugin</artifactId>
+                                <version>${frontend-maven-plugin.version}</version>
+
+                                <configuration>
+                                    <workingDirectory>${project.basedir}/src/main/app</workingDirectory>
+                                    <installDirectory>target/classes</installDirectory>
+                                </configuration>
+                                    <executions>
+                                        <execution>
+                                            <id>install node and npm</id>
+                                            <goals>
+                                                <goal>install-node-and-npm</goal>
+                                            </goals>
+                                            <configuration>
+                                                <nodeVersion>${node.version}</nodeVersion>
+                                                <npmVersion>5.6.0</npmVersion>
+                                            </configuration>
+                                        </execution>
+                                        <execution>
+                                            <id>npm install</id>
+                                            <goals>
+                                                <goal>npm</goal>
+                                            </goals>
+                                            <configuration>
+                                                <arguments>install</arguments>
+                                            </configuration>
+                                        </execution>
+                                        <execution>
+                                            <id>npm run build</id>
+                                            <goals>
+                                                <goal>npm</goal>
+                                            </goals>
+                                            <configuration>
+                                                <arguments>run build</arguments>
+            ////////////////////////////////////////////////
+                                            </configuration>
+                                        </execution>
+             <arguments>run start</arguments>
+                                        <execution>
+
+                                            <id>npm run build</id>
+                                            <goals>
+                                                <goal>npm</goal>
+                                            </goals>
+                                            <configuration>
+                                                <arguments>run start</arguments>
+                                            </configuration>
+                                        </execution>
+
+                        </executions>
+                    </plugin>-->
             </plugins>
         </build>
     </project>

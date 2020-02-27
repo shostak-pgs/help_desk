@@ -1,0 +1,9 @@
+.ticketFileterBar {
+text-align: left;
+}
+
+.ticketsFilterInput {
+    border-radius: 15px;
+    width: 60%;
+    margin: 2%;
+}

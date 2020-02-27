@@ -1,0 +1,26 @@
+  .table {
+    text-align: center;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    border: 3px solid #ddd;
+    width: 90%;
+    font-size: 90%;
+  }
+  
+  .table td, .table th {
+    border: 2px solid #ddd;
+    padding: 10px;
+    width: 20%;
+  }
+
+  .table td {
+      font-size: 80%;
+  }
+
+  .table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #4CAF50;
+    color: white;
+  }

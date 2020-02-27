@@ -1,0 +1,12 @@
+INSERT INTO User (firstName, lastName, role, email, password) VALUES ('user1', 'user1', 'EMPLOYEE', 'user1_mogilev@yopmail.com', 'P@ssword1');
+INSERT INTO User (firstName, lastName, role, email, password) VALUES ('user2', 'user2', 'EMPLOYEE', 'user2_mogilev@yopmail.com', 'P@ssword1');
+INSERT INTO User (firstName, lastName, role, email, password) VALUES ('manager1', 'manager1', 'MANAGER', 'manager1_mogilev@yopmail.com', 'P@ssword1');
+INSERT INTO User (firstName, lastName, role, email, password) VALUES ('manager2', 'manager2', 'MANAGER', 'manager2_mogilev@yopmail.com', 'P@ssword1');
+INSERT INTO User (firstName, lastName, role, email, password) VALUES ('engineer1', 'engineer1', 'ENGINEER', 'engineer1_mogilev@yopmail.com', 'P@ssword1');
+INSERT INTO User (firstName, lastName, role, email, password) VALUES ('engineer2', 'engineer2', 'ENGINEER', 'engineer2_mogilev@yopmail.com', 'P@ssword1');
+INSERT INTO Ticket (ticketName, createdOn, urgency, state, desiredResolutionDate, user_id, approver_id, assignee_id, category, description) VALUES ('teach', '1990-02-17', 'HIGHT', 'NEW', '2020-02-17', 1, 3, 5, 'APPLICATION_AND_SERVERS', 'Description 1');
+INSERT INTO Ticket (ticketName, createdOn, urgency, state, desiredResolutionDate, user_id, approver_id, assignee_id, category, description) VALUES ('teach2', '1990-02-17', 'LOW', 'DRAFT', '2020-02-19', 2, 3, 5, 'HARDWARE_AND_SOFTWARE', 'Description 2');
+INSERT INTO Ticket (ticketName, createdOn, urgency, state, desiredResolutionDate, user_id, approver_id, assignee_id, category, description) VALUES ('teach3', '1990-02-17', 'CRITICAL', 'IN_PROGRESS', '2020-02-19', 1, 4, 6, 'WORKPLACES_AND_FACILITIES', 'Description 3');
+INSERT INTO Comment (user_id, text, createdDate, ticket_id) VALUES (1, 'Comment user 1', '2020-02-20',  1);
+INSERT INTO Comment (user_id, text, createdDate, ticket_id) VALUES (2, 'Comment user 2', '2020-02-21',  1);
+INSERT INTO Comment (user_id, text, createdDate, ticket_id) VALUES (3, 'Comment user 3', '2020-02-19',  2);
