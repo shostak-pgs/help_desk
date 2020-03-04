@@ -1,0 +1,16 @@
+.overviewButton{
+    padding: 1vmin;
+    width: 20vmax;
+    border-radius: 6px;
+}
+
+.overviewHeaderLeftcol {
+    width: 150px; /* Ширина левой колонки */
+   }
+    
+.ticketInput {
+        border-radius: 10px;
+        padding: 5%;
+        width: 100%;
+        margin: 4%;
+}

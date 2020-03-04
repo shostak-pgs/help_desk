@@ -1,0 +1,9 @@
+.bar {
+    scroll-padding-left: 2vmax;
+    margin-left: 15rem;
+}
+
+.createNewTicketButton {
+    padding: 1vmin;
+    border-radius: 6px;
+}
