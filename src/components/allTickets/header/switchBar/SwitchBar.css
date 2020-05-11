@@ -1,0 +1,21 @@
+.switchBar {
+    scroll-padding-top: 1vmax;
+
+      
+}
+
+.button {
+    padding: 1vmin;
+    border-radius: 6px;
+    width: 40%;
+    margin: 3%;
+}
+
+.disable{
+    padding: 1vmin;
+    border-radius: 6px;
+    width: 40%;
+    margin: 3%;
+    pointer-events: none;
+    background-color: gray;
+ }
