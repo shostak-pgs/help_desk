@@ -14,7 +14,7 @@
             <maven.compiler.source>1.8</maven.compiler.source>
             <maven.compiler.target>1.8</maven.compiler.target>
             <h2.version>1.4.199</h2.version>
-            <spring.version>5.2.1.RELEASE</spring.version>
+            <spring.version>5.2.10.RELEASE</spring.version>
             <hibernate.version>5.3.7.Final</hibernate.version>
             <springmail.version>2.0.1.RELEASE</springmail.version>
             <javax.mail.version>1.6.2</javax.mail.version>
